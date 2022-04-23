@@ -2,6 +2,13 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  background-image: url(./img/wood-background.jpg);
+}
+
+/* < --------------------------------- App --------------------------------- > */
+
 .app {
   display: grid;
   justify-content: center;
@@ -9,16 +16,30 @@
   margin-top: 10%;
 }
 
+/* < --------------------------------- Main --------------------------------- > */
+
 .container {
   background-color: aliceblue;
   border: 15px solid rgb(223, 12, 5);
   width: 500px;
   height: 500px;
   border-radius: 10px;
+  padding: 5px;
 }
 
-body {
-  margin: 0;
-  background-image: url(./img/wood-background.jpg)
+/* < --------------------------------- Dice --------------------------------- > */
+.dice--container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  background-color: bisque;
+  padding: 10px;
 }
 
+.dice {
+  padding: 10px;
+  background-color: white;
+}
+
+.dice--number {
+
+}
