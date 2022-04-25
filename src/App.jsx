@@ -1,4 +1,4 @@
-import React, { useState }  from 'react';
+import React, { useState } from 'react';
 import "./style.css";
 import Dice from "./Components/Dice";
 
@@ -22,6 +22,7 @@ function App() {
         <div className="dice--container">
           {diceNumbers}
         </div>
+        <button type="button" className='btn'>Roll</button>
       </div>
       <h3>marshal.rocks</h3>
     </main>

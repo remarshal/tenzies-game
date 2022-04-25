@@ -26,6 +26,7 @@ main h3 {
 .container {
   background-color: aliceblue;
   border: 15px solid rgb(223, 12, 5);
+  background-color: bisque;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -36,15 +37,15 @@ main h3 {
 .dice--container {
   display: grid;
   grid-template: auto auto / repeat(5, 1fr);
-  background-color: bisque;
   padding: 10%;
+  justify-content: center;
 }
 
 .dice {
   background-color: white;
   height: 50px;
   width: 50px;
-  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -52,6 +53,24 @@ main h3 {
   margin: .8rem;
   cursor: pointer;
   font-size: 1.5rem;
+}
+
+.btn {
+  height: 40px;
+  width: 150px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  background-color: blue;
+  color: white;
+  font-size: 1.2rem;
+  align-self: center;
+  margin-bottom: 40px;
+}
+
+.btn:hover {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 255, 0.753);
+  color: white;
 }
 
 /* =============================== MEDIA QUERIES (SMALL DEVICES) =============================== */
