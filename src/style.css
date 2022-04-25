@@ -20,7 +20,7 @@ main h1 {
  
 main h3 {
   color: white;
-  text-shadow: 2px 2px 2px #000;
+  text-shadow: 2px 2px 2px #000;  
 }
 
 .container {
@@ -50,6 +50,8 @@ main h3 {
   justify-content: center;
   align-items: center;
   margin: .8rem;
+  cursor: pointer;
+  font-size: 1.5rem;
 }
 
 /* =============================== MEDIA QUERIES (SMALL DEVICES) =============================== */
