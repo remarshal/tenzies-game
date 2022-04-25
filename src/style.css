@@ -1,45 +1,64 @@
-* {
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
   background-image: url(./img/wood-background.jpg);
 }
 
-/* < --------------------------------- App --------------------------------- > */
+/* < --------------------------------- Main --------------------------------- > */
 
-.app {
+main {
   display: grid;
   justify-content: center;
+  align-items: center;
   text-align: center;
-  margin-top: 10%;
 }
 
-/* < --------------------------------- Main --------------------------------- > */
+main h1 {
+  color: white;
+  font-size: 5rem;
+}
+ 
+main h3 {
+  color: white;
+}
 
 .container {
   background-color: aliceblue;
   border: 15px solid rgb(223, 12, 5);
-  width: 500px;
-  height: 500px;
   border-radius: 10px;
-  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* < --------------------------------- Dice --------------------------------- > */
 .dice--container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template: auto auto / repeat(5, 1fr);
   background-color: bisque;
-  padding: 10px;
+  padding: 10%;
 }
 
 .dice {
-  padding: 10px;
   background-color: white;
+  height: 50px;
+  width: 50px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: .8rem;
 }
 
-.dice--number {
+/* =============================== MEDIA QUERIES (SMALL DEVICES) =============================== */
 
+@media screen and (max-width: 600px) {
+  .container {
+    margin: 5px;
+  }
+  
+  .dice {
+    height: 32px;
+    width: 32px;
+  }
 }

@@ -1,13 +1,9 @@
 import "../style.css"
 
-const Dice = () => {
+const Dice = (props) => {
     return (
-        <div className="dice--container">
-            <div className="dice">
-                <div className="dice--number">
-                    <h2>1</h2>
-                </div>
-            </div>
+        <div className="dice">
+                <h2>{props.value}</h2>
         </div>
     );
 };
