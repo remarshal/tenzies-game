@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Logo from './img/logo.png'
 import "./style.css";
 import Dice from "./Components/Dice";
 
@@ -28,7 +29,10 @@ function App() {
         </div>
         <button type="button" className='btn' onClick={rollDice} >Roll</button>
       </div>
+      <footer>
+      <img src={Logo} alt="Marshal Rocks Logo" className='logo--img' />
       <h3>marshal.rocks</h3>
+      </footer>
     </main>
   );
 }

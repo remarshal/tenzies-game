@@ -10,18 +10,20 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-color: aqua;
+  margin: 20px;
 }
 
 main h1 {
   color: white;
-  font-size: 7rem;
+  font-size: 6.5rem;
   margin: 50px;
   text-shadow: 2px 2px 2px #000;
 }
  
 main h3 {
   color: white;
-  margin: 50px;
+  margin-bottom: 50px;
   text-shadow: 2px 2px 2px #000;  
 }
 
@@ -76,11 +78,26 @@ main h3 {
   color: white;
 }
 
+.logo--img {
+  margin-top: 25px;
+  max-width: 20%;
+}
+
 /* =============================== MEDIA QUERIES (SMALL DEVICES) =============================== */
 
 @media screen and (max-width: 600px) {
+body {
+  background-color: aqua;
+  background-image: none;
+}
+
+main {
+  margin: 0;
+  margin-left: 25px;
+}
+
   .container {
-    margin: 5px;
+    margin: 60px;
   }
   
   .dice {
