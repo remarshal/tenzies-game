@@ -14,12 +14,14 @@ main {
 
 main h1 {
   color: white;
-  font-size: 5rem;
+  font-size: 7rem;
+  margin: 50px;
   text-shadow: 2px 2px 2px #000;
 }
  
 main h3 {
   color: white;
+  margin: 50px;
   text-shadow: 2px 2px 2px #000;  
 }
 
@@ -65,11 +67,12 @@ main h3 {
   font-size: 1.2rem;
   align-self: center;
   margin-bottom: 40px;
+  cursor: pointer;
 }
 
 .btn:hover {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-  background-color: rgba(0, 0, 255, 0.753);
+  background-color: rgba(0, 119, 255, 0.753);
   color: white;
 }
 

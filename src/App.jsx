@@ -21,7 +21,7 @@ function App() {
 
   return (
     <main>
-      <h1>Tenzies Game</h1>
+      <h1>TENZI</h1>
       <div className="container">
         <div className="dice--container">
           {diceNumbers}
