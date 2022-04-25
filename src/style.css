@@ -15,10 +15,12 @@ main {
 main h1 {
   color: white;
   font-size: 5rem;
+  text-shadow: 2px 2px 2px #000;
 }
  
 main h3 {
   color: white;
+  text-shadow: 2px 2px 2px #000;
 }
 
 .container {
