@@ -23,7 +23,7 @@ function App() {
     setDice(allNewDice())
   }
 
-  const diceNumbers = dice.map(number => <Dice value={number.value} key={number.id} />);
+  const diceNumbers = dice.map(number => <Dice value={number.value} key={number.id} isHeld={number.isHeld}/>);
 
   return (
     <main>
