@@ -24,7 +24,11 @@ function App() {
   }
 
   function holdDice(id) {
-    console.log(id)
+    setDice(prevDice => prevDice.map(number => {
+      return number.id === id ?
+        { ...number, isHeld: !number.isHeld } :
+        number
+    }))
   }
 
   const diceNumbers = dice.map(number =>
