@@ -9,7 +9,10 @@ function App() {
   function allNewDice() {
     const newDice = [];
     for (let i = 0; i < 10; i++) {
-      newDice.push(Math.floor(Math.random() * 6) + 1);
+      newDice.push({
+        value: Math.floor(Math.random() * 6) + 1,
+        isHeld: false
+      });
     }
     return newDice;
   }
@@ -18,7 +21,7 @@ function App() {
     setDice(allNewDice())
   }
 
-  const diceNumbers = dice.map(number => <Dice value={number} />);
+  const diceNumbers = dice.map(number => <Dice value={number.value} />);
 
   return (
     <main>
