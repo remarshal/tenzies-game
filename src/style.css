@@ -122,4 +122,9 @@ main {
     height: 32px;
     width: 32px;
   }
+
+  .dice--held {
+    height: 32px;
+    width: 32px;
+  }
 }
