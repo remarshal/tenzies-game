@@ -17,7 +17,7 @@ main {
 main h1 {
   color: white;
   font-size: 6.5rem;
-  margin: 50px;
+  margin: 0;
   text-shadow: 2px 2px 2px #000;
 }
  
@@ -27,6 +27,10 @@ main h3 {
   text-shadow: 2px 2px 2px #000;  
 }
 
+.instructions {
+  font-size: 1.2rem;
+  margin: 5px;
+}
 .container {
   background-color: aliceblue;
   border: 15px solid rgb(223, 12, 5);

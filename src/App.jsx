@@ -20,7 +20,9 @@ function App() {
   }
 
   function rollDice () {
-    setDice(allNewDice())
+    setDice(prevDice => prevDice.map(number => {
+      return number.isHeld ? number : {...number, value: Math.floor(Math.random() * 6) + 1}
+    }))
   }
 
   function holdDice(id) {
@@ -42,6 +44,9 @@ function App() {
   return (
     <main>
       <h1>TENZI</h1>
+      <p className="instructions">Roll dice</p>
+      <p className="instructions">Click to freeze same values between rolls.</p>
+      <p className="instructions">Win when all dice match!</p>
       <div className="container">
         <div className="dice--container">
           {diceNumbers}
