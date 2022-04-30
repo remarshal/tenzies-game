@@ -10,12 +10,11 @@ function App() {
     const newDice = [];
     for (let i = 0; i < 10; i++) {
       newDice.push({
-        value: Math.floor(Math.random() * 6) + 1,
+        value: Math.ceil(Math.random() * 6),
         isHeld: false,
         id: i
       });
     }
-    console.log(newDice)
     return newDice;
   }
 
@@ -44,9 +43,9 @@ function App() {
   return (
     <main>
       <h1>TENZI</h1>
-      <p className="instructions">Roll dice</p>
-      <p className="instructions">Click to freeze same values between rolls.</p>
-      <p className="instructions">Win when all dice match!</p>
+      <p className="instructions">Roll dice to start game.</p>
+      <p className="instructions">Freeze same value dice between rolls.</p>
+      <p className="instructions">How many rolls for ALL dice match?</p>
       <div className="container">
         <div className="dice--container">
           {diceNumbers}
