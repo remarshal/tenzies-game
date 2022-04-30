@@ -12,7 +12,6 @@ function App() {
   // checks dice for winning condition; setTenzi to true
   // using useEffect to keep 2 internal states in sync with each other
   useEffect(() => {
-    // check all dice are held and same value; set tenzi to true
     const allHeld = dice.every(number => number.isHeld)
     const firstValue = dice[0].value
     const allSameValue = dice.every(number => number.value === firstValue)
@@ -23,6 +22,8 @@ function App() {
       console.log("keep playing")
     }
   }, [dice]);
+
+  tenzi ? console.log("yes") : console.log("no")
 
   // generate 10 random dice numbers
   function allNewDice() {
@@ -72,7 +73,7 @@ function App() {
         <div className="dice--container">
           {diceNumbers}
         </div>
-        <button type="button" className='btn' onClick={rollDice} >Roll</button>
+        <button type="button" className='btn' onClick={rollDice} >{tenzi ? "Winner!!!" : "Roll"}</button>
       </div>
       <footer>
         <img src={Logo} alt="Marshal Rocks Logo" className='logo--img' />
