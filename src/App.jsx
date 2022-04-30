@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Logo from './img/logo.png';
 import "./style.css";
 import Dice from "./Components/Dice";
+import Confetti from 'react-confetti';
 
 function App() {
   const [dice, setDice] = useState(allNewDice());
@@ -22,8 +23,6 @@ function App() {
       console.log("keep playing")
     }
   }, [dice]);
-
-  tenzi ? console.log("yes") : console.log("no")
 
   // generate 10 random dice numbers
   function allNewDice() {
@@ -65,6 +64,7 @@ function App() {
 
   return (
     <main>
+      {tenzi && <Confetti />}
       <h1>TENZI</h1>
       <p className="instructions">Roll dice to start game.</p>
       <p className="instructions">Freeze same value dice between rolls.</p>
@@ -73,7 +73,7 @@ function App() {
         <div className="dice--container">
           {diceNumbers}
         </div>
-        <button type="button" className='btn' onClick={rollDice} >{tenzi ? "Winner!!!" : "Roll"}</button>
+        <button type="button" className='btn' onClick={rollDice} >{tenzi ? "New Game" : "Roll"}</button>
       </div>
       <footer>
         <img src={Logo} alt="Marshal Rocks Logo" className='logo--img' />
