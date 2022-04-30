@@ -10,10 +10,19 @@ function App() {
   const [tenzi, setTenzi] = useState(false);
 
   // checks dice for winning condition; setTenzi to true
+  // using useEffect to keep 2 internal states in sync with each other
   useEffect(() => {
-    console.log("dice changed");
+    // check all dice are held and same value; set tenzi to true
+    const allHeld = dice.every(number => number.isHeld)
+    const firstValue = dice[0].value
+    const allSameValue = dice.every(number => number.value === firstValue)
+    if (allHeld && allSameValue) {
+      console.log("winner")
+      setTenzi(true)
+    } else {
+      console.log("keep playing")
+    }
   }, [dice]);
-
 
   // generate 10 random dice numbers
   function allNewDice() {
