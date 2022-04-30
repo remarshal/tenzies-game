@@ -1,11 +1,21 @@
-import React, { useState } from 'react';
-import Logo from './img/logo.png'
+import React, { useState, useEffect } from 'react';
+import Logo from './img/logo.png';
 import "./style.css";
 import Dice from "./Components/Dice";
 
 function App() {
   const [dice, setDice] = useState(allNewDice());
 
+  // represents whether user has won the game
+  const [tenzi, setTenzi] = useState(false);
+
+  // checks dice for winning condition; setTenzi to true
+  useEffect(() => {
+    console.log("dice changed");
+  }, [dice]);
+
+
+  // generate 10 random dice numbers
   function allNewDice() {
     const newDice = [];
     for (let i = 0; i < 10; i++) {
@@ -18,20 +28,23 @@ function App() {
     return newDice;
   }
 
-  function rollDice () {
+  // roll only if dice is not held
+  function rollDice() {
     setDice(prevDice => prevDice.map(number => {
-      return number.isHeld ? number : {...number, value: Math.floor(Math.random() * 6) + 1}
-    }))
+      return number.isHeld ? number : { ...number, value: Math.floor(Math.random() * 6) + 1 };
+    }));
   }
 
+  // flip isHeld when dice is clicked
   function holdDice(id) {
     setDice(prevDice => prevDice.map(number => {
       return number.id === id ?
         { ...number, isHeld: !number.isHeld } :
-        number
-    }))
+        number;
+    }));
   }
 
+  // dynamically creates dice from Component
   const diceNumbers = dice.map(number =>
     <Dice
       value={number.value}
@@ -53,8 +66,8 @@ function App() {
         <button type="button" className='btn' onClick={rollDice} >Roll</button>
       </div>
       <footer>
-      <img src={Logo} alt="Marshal Rocks Logo" className='logo--img' />
-      <h3>marshal.rocks</h3>
+        <img src={Logo} alt="Marshal Rocks Logo" className='logo--img' />
+        <h3>marshal.rocks</h3>
       </footer>
     </main>
   );
