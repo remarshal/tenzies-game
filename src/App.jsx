@@ -37,11 +37,16 @@ function App() {
     return newDice;
   }
 
-  // roll only if dice is not held
+  // roll only if dice is not held or winner
   function rollDice() {
-    setDice(prevDice => prevDice.map(number => {
-      return number.isHeld ? number : { ...number, value: Math.floor(Math.random() * 6) + 1 };
-    }));
+    if (!tenzi) {
+      setDice(prevDice => prevDice.map(number => {
+        return number.isHeld ? number : { ...number, value: Math.floor(Math.random() * 6) + 1 };
+      }));
+    } else {
+      setTenzi(false)
+      setDice(allNewDice())
+    }
   }
 
   // flip isHeld when dice is clicked
@@ -67,7 +72,7 @@ function App() {
       {tenzi && <Confetti />}
       <h1>TENZI</h1>
       <p className="instructions">Roll dice to start game.</p>
-      <p className="instructions">Freeze same value dice between rolls.</p>
+      <p className="instructions">Click same value dice between rolls.</p>
       <p className="instructions">How many rolls for ALL dice match?</p>
       <div className="container">
         <div className="dice--container">
