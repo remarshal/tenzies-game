@@ -23,8 +23,10 @@ main h1 {
  
 main h3 {
   color: white;
-  margin-bottom: 50px;
+  margin-bottom: 25px;
+  margin-top: 0;
   text-shadow: 2px 2px 2px #000;  
+  font-size: 2rem;
 }
 
 .instructions {
@@ -97,7 +99,7 @@ main h3 {
 }
 
 .logo--img {
-  margin-top: 25px;
+  margin-top: 2px;
   max-width: 20%;
 }
 
